@@ -2,22 +2,17 @@ package com.coding.madscalculator.uifragment
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.lifecycleScope
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.coding.madscalculator.databinding.FragmentHistoryBinding
 import com.coding.madscalculator.pojo.CalculatorHistory
-import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.Query
-import kotlinx.coroutines.launch
-import kotlin.math.log
 
 private const val TAG = "HistoryFragment"
 class HistoryFragment : Fragment() {
@@ -74,11 +69,4 @@ class HistoryFragment : Fragment() {
         super.onStop()
         adapterFireBase.stopListening()
     }
-
-//    {
-//        Log.d(TAG, "setUpList: ${it.child("result").value.toString()} ${it.child("expression").value.toString()}")
-//        CalculatorHistory(it.child("result").value.toString(),
-//            it.child("expression").value.toString())
-//    }
-
 }

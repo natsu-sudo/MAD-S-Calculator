@@ -38,4 +38,5 @@
     <string name="failed">Failed to Send the Message %1$s</string>
     <string name="result_1_s">Result : %1$s</string>
     <string name="expression_1_s">Expression : %1$s</string>
+    <string name="please_wait">Please wait while we are fetching your data</string>
 </resources>

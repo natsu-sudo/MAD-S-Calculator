@@ -133,7 +133,6 @@ class CalculatorFragment : Fragment() {
         binding.delete.setOnClickListener {
             clickedA(it) }
         binding.clear.setOnClickListener {
-            sendHistoryToFireBase()
             clickedA(it) }
         binding.equal.setOnClickListener {
             sendHistoryToFireBase()
