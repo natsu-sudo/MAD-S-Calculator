@@ -2,6 +2,7 @@ package com.coding.madscalculator.uifragment
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.Espresso.pressBack
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
@@ -33,6 +34,7 @@ class LoginFragmentTest {
         resetText()
         onView(withId(R.id.user_name_email)).perform(typeText("krishanakant7495@gmail.com"))
         pressBack()
+        Thread.sleep(400)
         onView(withId(R.id.user_password)).perform(typeText("12345"))
         pressBack()
         onView(withId(R.id.login_button)).perform(click())
@@ -52,7 +54,7 @@ class LoginFragmentTest {
         onView(withId(R.id.user_password)).perform(typeText("12345678"))
         pressBack()
         onView(withId(R.id.login_button)).perform(click())
-        Thread.sleep(10000)
+        Thread.sleep(3000)
         //Verify Calculator
         onView(withId(R.id.calculator_fragment)).check(ViewAssertions.matches(isDisplayed()))
         onView(withId(R.id.user_name_email)).perform()
@@ -169,7 +171,7 @@ class LoginFragmentTest {
         onView(withId(R.id.n1)).perform(click())
         onView(withId(R.id.equal)).perform(click())
         onView(withId(R.id.clear)).perform(click())
-        Thread.sleep(2000)
+        Thread.sleep(20000)
     }
 
     private fun resetText() {
