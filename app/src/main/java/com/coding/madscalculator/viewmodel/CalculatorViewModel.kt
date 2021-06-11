@@ -94,37 +94,6 @@ class CalculatorViewModel:ViewModel() {
         exp.value = string
     }
 
-    fun bOpen() {
-        var string = exp.value!!
-        if (string[string.length - 1] == '.')
-            string = string.substring(0, string.length - 1)
-        string += "("
-        exp.value = string
-    }
-
-    fun bClose() {
-        var string = exp.value!!
-        var countO = 0
-        var countC = 0
-        for (i in string) {
-            if (i == '(')
-                countO++
-            if (i == ')')
-                countC++
-        }
-
-        if (string[string.length - 1] == '(') {
-            string = string.substring(0, string.length - 1)
-            exp.value = string
-            return
-        }
-
-        if (countC < countO) {
-            string += ")"
-            exp.value = string
-        }
-    }
-
     fun addNumber(n: String) {
         var string = exp.value!!
         if (n == ".") {
