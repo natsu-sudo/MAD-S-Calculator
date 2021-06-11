@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
 
-class Calculator : Fragment() {
+class CalculatorFragment : Fragment() {
     private var _binding: FragmentCalculatorBinding?=null
     private val binding get() =_binding!!
     private lateinit var auth: FirebaseAuth
@@ -62,7 +62,7 @@ class Calculator : Fragment() {
         binding.calculatorTopAppBar.setOnMenuItemClickListener {
             when(it.itemId){
                 R.id.history ->{
-                    findNavController().navigate(CalculatorDirections.actionCalculatorToHistory())
+                    findNavController().navigate(CalculatorFragmentDirections.actionCalculatorToHistory())
                     true
                 }
                 R.id.sign_out ->{
@@ -98,9 +98,9 @@ class Calculator : Fragment() {
             if (auth.currentUser==null){
                 //listener is called multiple time so check if we are in correct fragment
                 val currId= findNavController().currentDestination?.id
-                //if we are in Calculator Fragment then only we should Logout
+                //if we are in CalculatorFragment Fragment then only we should Logout
                 if (currId== R.id.calculator){
-                    findNavController().navigate(CalculatorDirections.actionCalculatorToLogin())
+                    findNavController().navigate(CalculatorFragmentDirections.actionCalculatorToLogin())
                 }
             }
         }
@@ -131,7 +131,6 @@ class Calculator : Fragment() {
         binding.multiply.setOnClickListener { clickedO('*') }
 
         binding.delete.setOnClickListener {
-            sendHistoryToFireBase()
             clickedA(it) }
         binding.clear.setOnClickListener {
             sendHistoryToFireBase()

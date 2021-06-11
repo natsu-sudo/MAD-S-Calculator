@@ -13,9 +13,9 @@ import com.coding.madscalculator.R
 import com.coding.madscalculator.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
-private const val TAG = "Login"
+private const val TAG = "LoginFragment"
 const val HISTORY_BASE_PATH="history"
-class Login : Fragment() {
+class LoginFragment : Fragment() {
     private lateinit var auth:FirebaseAuth
     private var _binding:FragmentLoginBinding?=null
     private val binding get() =_binding!!
@@ -24,7 +24,7 @@ class Login : Fragment() {
         auth= FirebaseAuth.getInstance()
         if (auth.currentUser!=null){
             findNavController().navigate(
-                LoginDirections.actionLoginToCalculator()
+                LoginFragmentDirections.actionLoginToCalculator()
             )
         }
     }
@@ -45,7 +45,7 @@ class Login : Fragment() {
         }
         binding.register.setOnClickListener {
             Log.w(TAG, "onViewCreated: ", )
-            findNavController().navigate(LoginDirections.actionLoginToRegisterFragment())
+            findNavController().navigate(LoginFragmentDirections.actionLoginToRegisterFragment())
         }
     }
 
@@ -62,7 +62,7 @@ class Login : Fragment() {
                     binding.progressBar.visibility=View.GONE
                     if (task.isSuccessful){
                         findNavController().navigate(
-                            LoginDirections.actionLoginToCalculator()
+                            LoginFragmentDirections.actionLoginToCalculator()
                         )
                     }else{
                         val toast=Toast.makeText(context,

@@ -45,8 +45,8 @@ class RegisterFragment : Fragment() {
     private fun registerUsers() {
         binding.userEmailLayout.error=null
         binding.userPasswordLayout.error=null
-        val email=binding.userNameEmail.text.toString()
-        val pass=binding.userPassword.text.toString()
+        val email=binding.userNameEmailR.text.toString()
+        val pass=binding.userNameEmailR.text.toString()
         if (validateInput(email,pass)){
             binding.progressBar.visibility=View.VISIBLE
             auth.createUserWithEmailAndPassword(email,pass)

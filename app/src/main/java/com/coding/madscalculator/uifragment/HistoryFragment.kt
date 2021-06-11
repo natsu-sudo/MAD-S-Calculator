@@ -19,8 +19,8 @@ import com.google.firebase.database.Query
 import kotlinx.coroutines.launch
 import kotlin.math.log
 
-private const val TAG = "History"
-class History : Fragment() {
+private const val TAG = "HistoryFragment"
+class HistoryFragment : Fragment() {
     private var _binding: FragmentHistoryBinding?=null
     private val binding get() =_binding!!
     private lateinit var auth: FirebaseAuth

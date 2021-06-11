@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".uifragment.RegisterFragment">
 
     <TextView
         android:id="@+id/budget"
@@ -33,7 +33,7 @@
         app:startIconDrawable="@drawable/ic_baseline_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/user_name_email"
+            android:id="@+id/user_name_email_r"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="5dp"
@@ -57,7 +57,7 @@
         app:startIconDrawable="@drawable/ic_baseline_password_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/user_password"
+            android:id="@+id/user_password_r"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"

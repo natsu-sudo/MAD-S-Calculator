@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/login"
-        android:name="com.coding.madscalculator.uifragment.Login"
+        android:name="com.coding.madscalculator.uifragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/calculator"
-        android:name="com.coding.madscalculator.uifragment.Calculator"
+        android:name="com.coding.madscalculator.uifragment.CalculatorFragment"
         android:label="fragment_calculator"
         tools:layout="@layout/fragment_calculator" >
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/history"
-        android:name="com.coding.madscalculator.uifragment.History"
+        android:name="com.coding.madscalculator.uifragment.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
     <fragment
