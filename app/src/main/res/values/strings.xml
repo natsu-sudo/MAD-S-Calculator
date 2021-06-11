@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">MADS Calculator</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_email_add">Please Enter The Email Address</string>
+    <string name="please_enter_password">Please Enter Password</string>
+    <string name="password_less">Password Shoul be 8 character or more</string>
+    <string name="auth_fail">Authentication Failed: %1$s</string>
+    <string name="ok">OK</string>
+    <string name="login">Login</string>
+    <string name="register_user">Register User</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="mad_s">MAD(S) Calculator</string>
+    <string name="history">History</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="plus">+</string>
+    <string name="back">back</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="multiply">*</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="sub">-</string>
+    <string name="_0">0</string>
+    <string name="dot">.</string>
+    <string name="c">C</string>
+    <string name="equals">=</string>
+    <string name="divide">/</string>
+    <string name="minus">-</string>
+    <string name="expression_or_result">Expression or Result are Empty</string>
+    <string name="failed">Failed to Send the Message %1$s</string>
+    <string name="result_1_s">Result : %1$s</string>
+    <string name="expression_1_s">Expression : %1$s</string>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.coding.madscalculator.uifragment.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_calculator"
+            app:destination="@id/calculator"
+            app:popUpTo="@id/login"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_login_to_registerFragment"
+            app:destination="@id/registerFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/calculator"
+        android:name="com.coding.madscalculator.uifragment.Calculator"
+        android:label="fragment_calculator"
+        tools:layout="@layout/fragment_calculator" >
+        <action
+            android:id="@+id/action_calculator_to_history"
+            app:destination="@id/history" />
+        <action
+            android:id="@+id/action_calculator_to_login"
+            app:destination="@id/login"
+            app:popUpTo="@id/login"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/history"
+        android:name="com.coding.madscalculator.uifragment.History"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.coding.madscalculator.uifragment.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_calculator"
+            app:destination="@id/calculator"
+            app:popUpTo="@id/registerFragment"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_registerFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+</navigation>
