@@ -40,7 +40,7 @@ class HistoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.historyRecyclerView.apply {
             layoutManager=LinearLayoutManager(context)
-            val query:Query=firebaseDatabase.reference.child(HISTORY_BASE_PATH)
+            val query:Query=firebaseDatabase.reference.child(HISTORY_BASE_PATH).limitToLast(10)
             val options:FirebaseRecyclerOptions<CalculatorHistory> =
                 FirebaseRecyclerOptions.Builder<CalculatorHistory>()
                     .setQuery(query) {
